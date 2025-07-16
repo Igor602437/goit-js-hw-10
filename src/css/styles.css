@@ -10,9 +10,26 @@
 @import url('./container.css');
 @import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+@import url('modern-normalize/modern-normalize.css');
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.5;
+}
+
+.nav-link:hover {
+  color: lightcoral;
+}
+
+.nav-link:hover::after {
+  margin-left: 8px;
+  content: '❯';
+  font-size: 20px;
+}
